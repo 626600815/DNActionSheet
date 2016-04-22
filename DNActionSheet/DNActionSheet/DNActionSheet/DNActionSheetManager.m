@@ -32,6 +32,9 @@
 }
 
 - (void)showImagePickerWithVC:(UIViewController *)VC selectImage:(DNSelectImage)image {
+    if (!VC) {
+        return;
+    }
     self.imageBlock = [image copy];
     self.currentVC = VC;
     DNActionSheet *sheet = [[DNActionSheet alloc] initWithTitle:ImagePicker_Title delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"拍照", @"从相册选取", nil];
