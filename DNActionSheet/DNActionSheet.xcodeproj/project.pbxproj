@@ -17,6 +17,7 @@
 		5170CF1A1CCA1BEC00C063FD /* DNActionSheetUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170CF191CCA1BEC00C063FD /* DNActionSheetUITests.m */; };
 		5170CF2C1CCA1C0300C063FD /* DNActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170CF291CCA1C0300C063FD /* DNActionSheet.m */; };
 		5170CF2D1CCA1C0300C063FD /* DNActionSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170CF2B1CCA1C0300C063FD /* DNActionSheetManager.m */; };
+		51A509001CCDAA27002906B4 /* ActionSheet.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51A508FF1CCDAA27002906B4 /* ActionSheet.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		5170CF291CCA1C0300C063FD /* DNActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNActionSheet.m; sourceTree = "<group>"; };
 		5170CF2A1CCA1C0300C063FD /* DNActionSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNActionSheetManager.h; sourceTree = "<group>"; };
 		5170CF2B1CCA1C0300C063FD /* DNActionSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNActionSheetManager.m; sourceTree = "<group>"; };
+		51A508FF1CCDAA27002906B4 /* ActionSheet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ActionSheet.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				5170CEF81CCA1BEC00C063FD /* AppDelegate.m */,
 				5170CEFA1CCA1BEC00C063FD /* ViewController.h */,
 				5170CEFB1CCA1BEC00C063FD /* ViewController.m */,
+				51A508FF1CCDAA27002906B4 /* ActionSheet.gif */,
 				5170CEF41CCA1BEC00C063FD /* Supporting Files */,
 			);
 			path = DNActionSheet;
@@ -263,6 +266,7 @@
 			files = (
 				5170CF041CCA1BEC00C063FD /* LaunchScreen.storyboard in Resources */,
 				5170CF011CCA1BEC00C063FD /* Assets.xcassets in Resources */,
+				51A509001CCDAA27002906B4 /* ActionSheet.gif in Resources */,
 				5170CEFF1CCA1BEC00C063FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DNActionSheet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wjn.DNActionSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DNActionSheet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wjn.DNActionSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
