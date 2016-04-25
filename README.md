@@ -4,6 +4,8 @@
 
 自定义的ActionSheet，简单实用
 
+![snapshot](https://github.com/626600815/DNActionSheet/blob/master/DNActionSheet/DNActionSheet/ActionSheet.gif)
+
 ###使用说明
 
 本Demo中的DNActionSheetManager是你项目中要用到的底部弹框的样式，目前只写了两个最常用的弹框样式的例子，
