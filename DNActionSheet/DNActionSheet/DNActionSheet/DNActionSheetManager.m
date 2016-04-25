@@ -32,7 +32,8 @@
 }
 
 - (void)showImagePickerWithVC:(UIViewController *)VC selectImage:(DNSelectImage)image {
-    if (!VC) {
+    NSAssert(VC != nil, @"给一个controller呗");
+    if (VC == nil) {
         return;
     }
     self.imageBlock = [image copy];
