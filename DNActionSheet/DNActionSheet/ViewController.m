@@ -19,10 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor redColor];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [[DNActionSheetManager shareActionSheet] showImagePickerWithVC:nil selectImage:^(UIImage *image) {
+    [[DNActionSheetManager shareActionSheet] showImagePickerWithVC:self selectImage:^(UIImage *image) {
         self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     }];
     
