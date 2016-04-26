@@ -13,8 +13,8 @@
 
 ####选取图片（图库+拍照） 回调回来的就是image
     [[DNActionSheetManager shareActionSheet] showImagePickerWithVC:self selectImage:^(UIImage *image) {
-      
-     }];
+    } cancel:^{
+    }];
 
 ###注销按钮点击弹框,获取到的index就是你点击的第几个按钮
 
