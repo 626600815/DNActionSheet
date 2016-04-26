@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) DNClickIndex indexBlock;
 @property (nonatomic, strong) DNSelectImage imageBlock;
+@property (nonatomic, strong) DNBlock cancelBlock;
 
 @property (nonatomic, strong) UIViewController *currentVC;
 
@@ -31,12 +32,9 @@
     return manage;
 }
 
-- (void)showImagePickerWithVC:(UIViewController *)VC selectImage:(DNSelectImage)image {
-    NSAssert(VC != nil, @"给一个controller呗");
-    if (VC == nil) {
-        return;
-    }
+- (void)showImagePickerWithVC:(UIViewController *)VC selectImage:(DNSelectImage)image cancel:(DNBlock)cancel {
     self.imageBlock = [image copy];
+    self.cancelBlock = [cancel copy];
     self.currentVC = VC;
     DNActionSheet *sheet = [[DNActionSheet alloc] initWithTitle:ImagePicker_Title delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"拍照", @"从相册选取", nil];
     [sheet show];
@@ -49,7 +47,6 @@
     [sheet setButtonTitleColor:[UIColor redColor] bgColor:nil fontSize:0 atIndex:0];
     [sheet show];
 }
-
 
 #pragma mark - DNActionSheetDelegate
 - (void)actionSheet:(DNActionSheet *)sheet clickedButtonIndex:(NSInteger)buttonIndex {
@@ -110,6 +107,15 @@
     }];
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:^() {
+        if (_cancelBlock) {
+            _cancelBlock();
+            _cancelBlock = nil;
+        }
+    }];
+    
+}
 
 
 @end

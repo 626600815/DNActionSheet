@@ -25,11 +25,9 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [[DNActionSheetManager shareActionSheet] showImagePickerWithVC:self selectImage:^(UIImage *image) {
         self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    } cancel:^{
+        NSLog(@"取消了");
     }];
-    
-//    [[DNActionSheetManager shareActionSheet] showLogoutWithIndex:^(NSInteger index) {
-//        
-//    }];
 }
 
 - (void)didReceiveMemoryWarning {
